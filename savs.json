@@ -1,0 +1,33 @@
+{
+  "imports":[],
+  "inputs":["D", "C"],
+  "outputs":["Q", "_Q"],
+  "circuits":[
+    [
+      {"name": "D Triger"},
+      {"inputs": ["d", "c"]},
+      {"output": ["q", "_q"]},
+      {"parts": [
+        {"NAND": "nand1"},
+        {"NAND": "nand2"},
+        {"NAND": "nand3"},
+        {"NAND": "nand4"}
+      ]},
+      {"wire": [
+        {"w1": ["D", "d", "nand1:A"]},
+        {"w2": ["C", "c", "nand1:B", "nand2:B"]},
+        {"w3": ["nand1:OUT", "nand3:A", "nand2:A"]},
+        {"w4": ["nand2:OUT", "nand4:B"]},
+        {"w5": ["nand3:OUT", "q", "Q", "nand4:A"]},
+        {"w6": ["nand4:OUT", "_q", "_Q", "nand3:B"]}
+      ]}
+    ]
+  ],
+  "wire": [
+    {"w1": []},
+    {"w2": []},
+    {"w3": []}
+  ],
+  "actions":[],
+  "setings":[]
+}

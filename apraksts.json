@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -374.4, "left": 187.24, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp1", "top": -374.4, "left": 187.24,"attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not1", "top": -86.4, "left": -153.6, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and1", "top": -182.4, "left": -96, "attrs": {} },
+    { "type": "wokwi-gate-or-2", "id": "or1", "top": 153.6, "left": -172.8, "attrs": {} },
+    { "type": "wokwi-gate-xor-2", "id": "xor1", "top": -76.8, "left": 115.2, "attrs": {} },
+    { "type": "wokwi-gate-nand-2", "id": "nand1", "top": 105.6, "left": -124.8, "attrs": {} },
+    { "type": "wokwi-mux-2", "id": "mux1", "top": -163.2, "left": 19.2, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop1", "top": 0, "left": -259.2, "attrs": {} },
+    { "type": "wokwi-flip-flop-dsr", "id": "flop2", "top": 76.8, "left": -259.2, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -28.04, "left": -393.6, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 38.4, "left": -413.4, "attrs": {} }
+  ],
+  "connections": [ [ "esp:TX", "$serialMonitor:RX", "", [] ], [ "esp:RX", "$serialMonitor:TX", "", [] ] ],
+  "dependencies": {}
+}
+
